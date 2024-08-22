@@ -25,13 +25,30 @@ nav .search{ background: white; color: #578878;
      border-radius: 2rem; padding: 0 1rem; line-height: 1.5rem;
     display: inline-block;}
 
-/* Intro styles */
-.container{padding: 1rem 4rem; display: flex; 
+/* page styles */
+.container{padding: 1rem 4rem; display: flex; flex-wrap: wrap;
     justify-content: space-between; align-items: center; height: 90%;}
+.container h1{font-size: 4.5rem; line-height: 1;}
+.container p{margin: 1rem 0; line-height: 1.5;}
 .intro{width: 40%;}
-.intro h1{font-size: 4.5rem; line-height: 1;}
-.intro p{margin: 1rem 0; line-height: 1.5;}
 .block{display: block;}
+
+.about-intro{width: 100%;}
+.team{width: 100%; display: flex; justify-content: space-between;}
+.team h2{font-size: 3rem;}
+.member{display: flex;}
+.member .icon img{width: 50px; height: auto; background: white; border-radius: 50%; padding: .25rem;}
+.member .details{margin-left: 1rem; line-height: 1.5;}
+.member .title{
+    display: block; 
+    background: #578878;
+    color: white; 
+    padding: .25rem;
+    margin-top: .5rem;
+    text-align: center;
+    border-radius: .25rem;
+    border: 1px solid white;
+}
 
 /* form elements */
 button{
