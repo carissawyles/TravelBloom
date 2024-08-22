@@ -1,0 +1,47 @@
+/* nav css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height:100%;
+} 
+body{
+    background: linear-gradient(to right, rgba(61, 101, 90, 1), rgba(0, 0, 0, 0)), url('./images/waterfalls.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+p, ul li{font-family: sans-serif;}
+nav{background: black; color: white; 
+    padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;}
+nav ul{list-style: none;}
+nav ul li{display: inline; padding: 0 .5rem; font-weight: bold;}
+nav a{color: white; text-decoration: none;}
+nav a:hover{text-decoration: underline;}
+nav .search{ background: white; color: #578878;
+     border-radius: 2rem; padding: 0 1rem; line-height: 1.5rem;
+    display: inline-block;}
+
+/* Intro styles */
+.container{padding: 1rem 4rem; display: flex; 
+    justify-content: space-between; align-items: center; height: 90%;}
+.intro{width: 40%;}
+.intro h1{font-size: 4.5rem; line-height: 1;}
+.intro p{margin: 1rem 0; line-height: 1.5;}
+.block{display: block;}
+
+/* form elements */
+button{
+    background: #578878;
+    color: white;
+    padding: .25rem  1rem;
+    margin: .25rem auto;
+    border-radius: .5rem;
+    border: 1px solid white;
+}
+
+input{border: none; padding: .2rem .5rem; width: 15rem;}
+input::placeholder {color: #578878;}
