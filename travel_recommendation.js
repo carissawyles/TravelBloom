@@ -45,7 +45,7 @@ function searchKeyword(){
     })
     .catch(error => {
         console.error('Error:', error);
-        resultDiv.innerHTML = 'An error occurred while fetching data.';
+        resultDiv.innerHTML = `<p class="error">An error occurred while fetching data.</p>`;
     });
 }
 btnSearch.addEventListener('click', searchKeyword);

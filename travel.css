@@ -32,13 +32,15 @@ nav a:hover{text-decoration: underline;}
 nav .search{ background: white; color: #578878;
      border-radius: 2rem; padding: 0 1rem; line-height: 1.5rem;
     display: inline-block; text-align: center;}
+nav .search input{width: 100%;}
 nav .search input::placeholder{text-align: center;}
 .mobileHide{display: none !important;}
 @media screen and (min-width: 815px){
-        nav{flex-direction: row;}
-        nav ul{padding: 0;}
+    nav{flex-direction: row;}
+    nav ul{padding: 0;}
     .mobileHide{display: block; visibility: hidden;}
-    }
+    nav .search input{width: 15rem;}
+}
 
 /* page styles */
 .container{padding: 1rem 2rem; display: flex; flex-wrap: wrap;
@@ -103,7 +105,7 @@ button, .btn{
     text-decoration: none;
 }
 
-input{border: none; padding: .2rem .5rem; width: 15rem;}
+input{border: none; padding: .2rem .5rem;}
 input::placeholder {color: #578878;}
 
 #contactForm{ 
