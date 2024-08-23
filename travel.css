@@ -38,7 +38,7 @@ nav .search input::placeholder{text-align: center;}
 @media screen and (min-width: 815px){
     nav{flex-direction: row;}
     nav ul{padding: 0;}
-    .mobileHide{display: block; visibility: hidden;}
+    .mobileHide{display: block !important; visibility: hidden;}
     nav .search input{width: 15rem;}
 }
 
