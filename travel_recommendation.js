@@ -15,7 +15,7 @@ function searchKeyword(){
         else if(input.slice(0,5) === 'beach'){
             showResults(data.beaches); }
         else{
-            resultDiv.innerHTML = 'Search term not found, please try searching for beaches, countries, or temples.';
+            resultDiv.innerHTML = 'Search term not found, please try searching for countries, beaches, or temples.';
         }
 
         function showResults(destinations){

@@ -6,6 +6,8 @@
 }
 html, body {
     height:100%;
+    overflow: hidden;
+
 } 
 body{
     background: linear-gradient(to right, rgba(61, 101, 90, 1), rgba(0, 0, 0, 0)), url('./images/waterfalls.jpg') center center no-repeat;
@@ -27,8 +29,8 @@ nav .search{ background: white; color: #578878;
 
 /* page styles */
 .container{padding: 1rem 4rem; display: flex; flex-wrap: wrap;
-    justify-content: space-between; align-items: center; height: 90%;}
-.container h1{font-size: 4.5rem; line-height: 1;}
+    justify-content: space-between; align-items: flex-start; height: 90%;}
+.container h1{font-size: 4.5rem; line-height: 1; margin-top: 3rem;}
 .container p{margin: 1rem 0; line-height: 1.5;}
 .intro{width: 40%;}
 .block{display: block;}
@@ -49,6 +51,12 @@ nav .search{ background: white; color: #578878;
     border-radius: .25rem;
     border: 1px solid white;
 }
+
+/* search results */
+.search-results{width: 40%; overflow-y: auto; height: 100%;}
+.destination{background-color: rgba(255,255,255,.5); color: black;}
+.destImg{max-width: 100%;}
+
 
 /* form elements */
 button{
