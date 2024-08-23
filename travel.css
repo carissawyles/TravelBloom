@@ -48,7 +48,6 @@ nav .search input::placeholder{text-align: center;}
 .container h1{font-size: 3rem; line-height: 1; margin-top: 3rem;}
 .container p{margin: 1rem 0; line-height: 1.5;}
 
-
 @media screen and (min-width: 359px){
     .container h1{font-size: 3.5rem;}
 }
@@ -89,7 +88,6 @@ nav .search input::placeholder{text-align: center;}
 .destImg{max-width: 100%;}
 .destination h3, .destination p{padding: 0 1rem;}
 .country{background: #578878; padding: .5rem; border-radius: .5rem; margin: 1.2rem auto;}
-.error{background-color: rgba(255,255,255,.75); color: #861305; border-radius: .5rem; padding: .5rem;}
 @media screen and (min-width: 815px){
     .search-results{width: 40%; overflow-y: auto; scrollbar-color: rgba(255,255,255,.75) rgba(255,255,255,.5);
         scrollbar-width: thin; height: 100%; margin-top: 0; padding: 0 1rem;}
@@ -130,3 +128,7 @@ input::placeholder {color: #578878;}
     #contactForm{width: 45%;}
    
 }
+
+.error{background-color: rgba(255,255,255,.75); color: #861305; border-radius: .5rem; padding: .5rem;}
+.hidden{display: none;}
+.form-error{border: 1px solid red;}
