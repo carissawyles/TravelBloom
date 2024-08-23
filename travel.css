@@ -62,3 +62,20 @@ button{
 
 input{border: none; padding: .2rem .5rem; width: 15rem;}
 input::placeholder {color: #578878;}
+
+#contactForm{ 
+    background: rgba(255,255,255, .5);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+#contactForm div{
+    margin: 1rem 0;
+}
+#contactForm label{
+    display: block;
+    color: #000;
+}
+#contactForm input, #contactForm textarea{
+    width: 20rem;
+}
