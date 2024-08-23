@@ -6,41 +6,66 @@
 }
 html, body {
     height:100%;
-    overflow: hidden;
 
-} 
+}
+@media screen and (min-width: 815px){
+    html, body {
+        overflow: hidden;
+    }
+}
 body{
     background: linear-gradient(to right, rgba(61, 101, 90, 1), rgba(0, 0, 0, 0)), url('./images/waterfalls.jpg') center center no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     color: white;
     height: 100%;
     width: 100%;
 }
 p, ul li{font-family: sans-serif;}
 nav{background: black; color: white; 
-    padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;}
-nav ul{list-style: none;}
+    padding: 1rem 2rem; display: flex; flex-direction: column;
+    justify-content: space-between; align-items: center;}
+nav ul{list-style: none; padding: .5rem 0;}
 nav ul li{display: inline; padding: 0 .5rem; font-weight: bold;}
 nav a{color: white; text-decoration: none;}
 nav a:hover{text-decoration: underline;}
 nav .search{ background: white; color: #578878;
      border-radius: 2rem; padding: 0 1rem; line-height: 1.5rem;
-    display: inline-block;}
+    display: inline-block; text-align: center;}
+nav .search input::placeholder{text-align: center;}
+.mobileHide{display: none !important;}
+@media screen and (min-width: 815px){
+        nav{flex-direction: row;}
+        nav ul{padding: 0;}
+    .mobileHide{display: block; visibility: hidden;}
+    }
 
 /* page styles */
-.container{padding: 1rem 4rem; display: flex; flex-wrap: wrap;
+.container{padding: 1rem 2rem; display: flex; flex-wrap: wrap;
     justify-content: space-between; align-items: flex-start; height: 90%;}
-.container h1{font-size: 4.5rem; line-height: 1; margin-top: 3rem;}
+.container h1{font-size: 3rem; line-height: 1; margin-top: 3rem;}
 .container p{margin: 1rem 0; line-height: 1.5;}
-.intro{width: 40%;}
-.block{display: block;}
 
+
+@media screen and (min-width: 359px){
+    .container h1{font-size: 3.5rem;}
+}
+@media screen and (min-width: 499px){
+    .container{padding: 1rem 4rem;}
+    .container h1{font-size: 4.5rem;}
+}
+@media screen and (min-width: 815px){
+    .intro{width: 40%;}
+    .block{display: block;}
+}
+
+/* about page styles */
 .about-intro{width: 100%;}
-.team{width: 100%; display: flex; justify-content: space-between;}
-.team h2{font-size: 3rem;}
-.member{display: flex;}
+.team{width: 100%; display: flex; flex-direction: column; justify-content: space-between;}
+.team h2{font-size: 3rem; }
+.member{display: flex; margin-bottom: 1rem;}
 .member .icon img{width: 50px; height: auto; background: white; border-radius: 50%; padding: .25rem;}
-.member .details{margin-left: 1rem; line-height: 1.5;}
+.member .details{ width: 14rem; margin-left: 1rem; line-height: 1.5;}
 .member .title{
     display: block; 
     background: #578878;
@@ -51,21 +76,31 @@ nav .search{ background: white; color: #578878;
     border-radius: .25rem;
     border: 1px solid white;
 }
-
+@media screen and (min-width: 815px){
+    .team{flex-direction: row;}
+    .memeber{margin-bottom: 0;}
+    .member .details{width: auto;} 
+}
 /* search results */
-.search-results{width: 40%; overflow-y: auto; height: 100%;}
-.destination{background-color: rgba(255,255,255,.5); color: black;}
+.search-results{ padding-bottom: 2rem; margin-top: 2rem;}
+.destination{background-color: rgba(255,255,255,.5); color: black; padding-bottom: .25rem; margin-bottom: 1rem;}
 .destImg{max-width: 100%;}
-
-
+.destination h3, .destination p{padding: 0 1rem;}
+.country{background: #578878; padding: .5rem; border-radius: .5rem; margin: 1.2rem auto;}
+.error{background-color: rgba(255,255,255,.75); color: #861305; border-radius: .5rem; padding: .5rem;}
+@media screen and (min-width: 815px){
+    .search-results{width: 40%; overflow-y: auto; scrollbar-color: rgba(255,255,255,.75) rgba(255,255,255,.5);
+        scrollbar-width: thin; height: 100%; margin-top: 0; padding: 0 1rem;}
+}
 /* form elements */
-button{
+button, .btn{
     background: #578878;
     color: white;
     padding: .25rem  1rem;
     margin: .25rem auto;
     border-radius: .5rem;
     border: 1px solid white;
+    text-decoration: none;
 }
 
 input{border: none; padding: .2rem .5rem; width: 15rem;}
@@ -75,6 +110,8 @@ input::placeholder {color: #578878;}
     background: rgba(255,255,255, .5);
     padding: 1rem;
     border-radius: .5rem;
+    margin-top: 2rem;
+    width: 100%;
 }
 
 #contactForm div{
@@ -85,5 +122,9 @@ input::placeholder {color: #578878;}
     color: #000;
 }
 #contactForm input, #contactForm textarea{
-    width: 20rem;
+    width: 100%;
+}
+@media screen and (min-width: 815px){
+    #contactForm{width: 45%;}
+   
 }

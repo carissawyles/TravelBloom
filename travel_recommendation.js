@@ -1,21 +1,22 @@
 const btnSearch = document.getElementById('btnSearch');
+const btnClear = document.getElementById('btnClear');
 
 function searchKeyword(){
     const input = document.getElementById('searchInput').value.toLowerCase();
     const resultDiv = document.getElementById('results');
-    resultDiv.innerHTML = '';
 
     fetch('travel_recommendation_api.json')
     .then(response => response.json())
     .then(data => {
         if (input.slice(0,5) === 'count'){
-            showResultsLong(data.countries);}
+            showResultsLong(data.countries); resultDiv.scrollIntoView({ behavior: "smooth"});}
         else if (input.slice(0,5) === 'templ'){
-            showResults(data.temples);}
+            showResults(data.temples); resultDiv.scrollIntoView({ behavior: "smooth"});}
         else if(input.slice(0,5) === 'beach'){
-            showResults(data.beaches); }
+            showResults(data.beaches); resultDiv.scrollIntoView({ behavior: "smooth"}); }
         else{
-            resultDiv.innerHTML = 'Search term not found, please try searching for countries, beaches, or temples.';
+            resultDiv.innerHTML = `<p class="error">Search term not found, please try searching for countries, beaches, or temples.</p>`;
+            resultDiv.scrollIntoView({ behavior: "smooth"});
         }
 
         function showResults(destinations){
@@ -33,7 +34,7 @@ function searchKeyword(){
         function showResultsLong(countries){
             countries.forEach(country => {
                 const countryDiv = document.createElement("div");
-                countryDiv.classList.add("countryDiv");
+                countryDiv.classList.add("country");
                 countryDiv.innerHTML += `<h2>${country.name}</h2>`;
 
                 resultDiv.appendChild(countryDiv);
@@ -48,3 +49,14 @@ function searchKeyword(){
     });
 }
 btnSearch.addEventListener('click', searchKeyword);
+document.getElementById('searchInput').addEventListener('keypress', function(e){
+    if (e.key === "Enter"){searchKeyword();}
+});
+
+btnClear.addEventListener('click', function(e){
+    const input = document.getElementById('searchInput');
+    const resultDiv = document.getElementById('results');
+    input.value= '';
+    resultDiv.innerHTML = '';
+    input.focus();
+});
