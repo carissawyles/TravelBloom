@@ -1,15 +1,18 @@
+/* variables */
 :root {
   --main-color: #114b71;
   --main-light-color: #176fa4;
+  --nav-bg-color: transparent;
 }
 
-/* nav css */
+/* css */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 html, body {
+    scroll-behavior: smooth;
     height:100%;
 
 }
@@ -26,8 +29,11 @@ body{
     height: 100%;
     width: 100%;
 }
+p{line-height: 1.5;}
 p, ul li{font-family: sans-serif;}
-nav{background: black; color: white; 
+
+/* nav css */
+nav{background: var(--nav-bg-color); color: white; 
     padding: 1rem 2rem; display: flex; flex-direction: column;
     justify-content: space-between; align-items: center;}
 nav ul{list-style: none; padding: .5rem 0;}
@@ -50,9 +56,9 @@ nav .search input::placeholder{text-align: center;}
 
 /* page styles */
 .container{padding: 1rem 2rem; display: flex; flex-wrap: wrap;
-    justify-content: space-between; align-items: flex-start; height: 90%;}
-.container h1{font-size: 3rem; line-height: 1; margin-top: 3rem;}
-.container .intro p{margin: 1rem 0; line-height: 1.5; margin-bottom: 2.5rem;}
+    justify-content: space-between; align-items: flex-start;  margin-bottom: 2rem;}
+.container h1{font-size: 3rem; line-height: 1; margin-top: 1rem; margin-bottom: 1rem;}
+.container .intro p{margin: 1rem 0;  margin-bottom: 2.5rem;}
 
 
 @media screen and (min-width: 359px){
@@ -60,11 +66,13 @@ nav .search input::placeholder{text-align: center;}
 }
 @media screen and (min-width: 499px){
     .container{padding: 1rem 4rem;}
-    .container h1{font-size: 4.5rem;}
+    .container h1{font-size: 4.5rem; margin-top: 2rem;}
 }
 @media screen and (min-width: 815px){
     .intro{width: 50%;}
     .block{display: block;}
+    .container h1{margin-top: 3rem;}
+    .container{height: 90%;}
 }
 @media screen and (min-width: 1023px){
     .intro{width: 40%;}
@@ -72,8 +80,8 @@ nav .search input::placeholder{text-align: center;}
 
 /* about page styles */
 .about-intro{width: 100%;}
-.team{width: 100%; display: flex; flex-direction: column; justify-content: space-between;}
-.team h2{font-size: 3rem; }
+.team{width: 100%; margin-top: 1rem; display: flex; flex-direction: column; justify-content: space-between;}
+.team h2{font-size: 3rem; margin-bottom: 1rem;}
 .member{display: flex; margin-bottom: 1rem;}
 .member .icon img{width: 50px; height: auto; background: white; border-radius: 50%; padding: .25rem;}
 .member .details{ width: 14rem; margin-left: 1rem; line-height: 1.5;}
@@ -88,7 +96,8 @@ nav .search input::placeholder{text-align: center;}
     border: 1px solid white;
 }
 @media screen and (min-width: 815px){
-    .team{flex-direction: row;}
+    .team{flex-direction: row; align-items: center;}
+    .team h2{margin-bottom: 0;}
     .memeber{margin-bottom: 0;}
     .member .details{width: auto;} 
 }
@@ -99,6 +108,8 @@ nav .search input::placeholder{text-align: center;}
 .destination h3, .destination p{padding: 0 1rem;}
 .destination p{padding: 0 1rem; margin: .75rem auto;}
 .country{background: var(--main-color); padding: .5rem; border-radius: .5rem; margin: 1.2rem auto;}
+.scroll-top{text-align: center; margin-top: 1.5rem; margin-bottom: 2rem;}
+
 @media screen and (min-width: 815px){
     .search-results{width: 40%; overflow-y: auto; scrollbar-color: rgba(255,255,255,.75) rgba(255,255,255,.5);
         scrollbar-width: thin; height: 100%; margin-top: 0; padding: 0 1rem;}
@@ -126,10 +137,9 @@ input{border: none; padding: .2rem .5rem;}
 input::placeholder {color: var(--main-color);}
 
 #contactForm{ 
-    background: rgba(255,255,255, .5);
+    background: rgba(0,0,0, .25);
     padding: 1rem;
     border-radius: .5rem;
-    margin-top: 2rem;
     width: 100%;
 }
 
@@ -138,13 +148,13 @@ input::placeholder {color: var(--main-color);}
 }
 #contactForm label{
     display: block;
-    color: #000;
+    color: #fff;
 }
 #contactForm input, #contactForm textarea{
     width: 100%;
 }
 @media screen and (min-width: 815px){
-    #contactForm{width: 45%;}
+    #contactForm{width: 45%; margin-top: 2rem;}
    
 }
 

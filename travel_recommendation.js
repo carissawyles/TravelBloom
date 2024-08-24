@@ -38,7 +38,11 @@ function searchKeyword(){
             }
         }
         //scroll results into view for mobile searches
-        resultDiv.scrollIntoView({ behavior: "smooth"});
+        var screenSize = window.matchMedia("(max-width: 815px)")
+        if(screenSize.matches){
+            resultDiv.innerHTML += `<div class="scroll-top"><a href="#top" class="btn">Scroll to Top ⇑</a></div>`;
+            resultDiv.scrollIntoView({ behavior: "smooth"});
+        }
 
         //function accepts an array of destinations
         function showResults(destinations){
